@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.mulish-font {
+    font-family: "Mulish", sans-serif;
+}
+
+
+.retro-gradient {
+    background: -webkit-linear-gradient(#7e68ff, #66659e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+hr{
+    border-style: dashed;
+}

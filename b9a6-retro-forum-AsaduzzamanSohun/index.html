@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Retro</title>
+</head>
+
+<body class="mulish-font">
+
+    <header class="container mx-auto">
+
+        <!-- nav bar section -->
+        <nav class="mt-10">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a><img class="w-12" src="images/icons/Frame 2.png" alt="" title="Home"></a></li>
+                            <li><a><img class="w-12" src="images/icons/Frame 3.png" alt="" title="Tooltip"></a></li>
+                            <li><a><img class="w-12" src="images/icons/Frame 4.png" alt="" title="User"></a></li>
+                            <li><a><img class="w-12" src="images/icons/Frame 5.png" alt="" title="Report"></a></li>
+                            <li><a class="btn bg-[#797DFC] rounded-3xl text-white px-8">Sign In</a></li>
+                        </ul>
+
+                    </div>
+                    <img src="images/logo.png " alt="" srcset="">
+                </div>
+                <div class="navbar-end hidden lg:flex gap-6">
+                    <ul class="flex gap-6">
+                        <li><a><img class="w-12" src="images/icons/Frame 2.png" alt="" title="Home"></a></li>
+                        <li><a><img class="w-12" src="images/icons/Frame 3.png" alt="" title="Tooltip"></a></li>
+                        <li><a><img class="w-12" src="images/icons/Frame 4.png" alt="" title="User"></a></li>
+                        <li><a><img class="w-12" src="images/icons/Frame 5.png" alt="" title="Report"></a></li>
+                    </ul>
+
+                    <a class="btn bg-[#797DFC] rounded-3xl text-white px-8">Sign In</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Banner Section -->
+
+        <section class="my-12">
+
+            <div
+                class="banner-container flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#12132D] text-white bg-[url('/images/bgbanner.png')] bg-no-repeat bg-cover rounded-3xl px-3 py-8 lg:p-28 space-y-10">
+
+                <div class="space-y-6">
+
+                    <h1
+                        class="text-2xl lg:text-6xl font-[1000] leading-tight lg:leading-tight text-center lg:text-left">
+                        Welcome to the <br><span class="retro-gradient">ReTro</span> Forum</h1>
+                    <p class="text-sm lg:text-lg text-center lg:text-left">Share your favorite opinion and with and wp
+                        <br> forum coffee mug
+                    </p>
+                    <div class="bg-white rounded-full flex justify-between">
+                        <input id="search-text" type="text" placeholder="Type here"
+                            class="input w-full max-w-xs rounded-l-full text-black" />
+                        <a onclick="handleSearch()" class="btn bg-[#797DFC] rounded-3xl text-white font-bold px-8">Search</a>
+                    </div>
+
+                </div>
+                <div class="bg-white text-black p-10 w-80 text-xl rounded-3xl space-y-5 mx-auto lg:mx-0">
+
+                    <div class="flex justify-between font-bold">
+                        <p>Registered Users</p>
+                        <p>01</p>
+                    </div>
+                    <div class="flex justify-between font-bold">
+                        <p>Forum</p>
+                        <p>05</p>
+                    </div>
+                    <div class="flex justify-between font-bold">
+                        <p>Topics</p>
+                        <p>01</p>
+                    </div>
+                    <div class="flex justify-between font-bold">
+                        <p>Replies</p>
+                        <p>01</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- Main Section Started -->
+
+    <main class="container mx-auto my-36">
+
+        <section>
+
+            <div class="text-center lg:space-y-5 my-5">
+                <h2 class="text-4xl font-[1000]">Let's Discuss</h2>
+                <p class="bg-white rounded-full">Yes, you can run unit tests and view the results directly within the
+                    app. The <br>integrated testing features allow for a streamlined .</p>
+            </div>
+
+        </section>
+
+        <!-- Bookmark section -->
+        <section>
+
+            <!-- class="grid grid-cols-1 lg:grid-cols-3 gap-10 m-2" -->
+
+            <div id="toggle-loading" class="text-center mt-64 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+
+            </div>
+
+            <div id="post-bookmark-section" class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10 m-2">
+
+
+                <!-- Post Section -->
+                <div id="post-container" class="lg:col-span-2 space-y-4">
+
+                    
+
+                    
+
+                </div>
+
+
+                <!-- Bookmark Section -->
+                <div>
+
+                    <div class="bg-gray-100 rounded-lg lg:rounded-3xl p-2 lg:p-10">
+
+                        <div class="flex justify-between">
+                            <h3 class="text-lg lg:text-2xl font-bold">Title</h3>
+                            <p>Mark as read (<span id="bookmark-count">0</span>)</p>
+                        </div>
+
+                        <div id="bookmark-container" class="mt-6">
+
+                            <!-- <div id="" class="flex justify-between items-center bg-white p-4 rounded-2xl">
+
+                                <div>
+                                    <h3 class="font-bold">
+                                        10 Kids Unaware 
+                                    </h3>
+                                </div>
+    
+                                <div class="flex justify-around items-center gap-2">
+                                    <img src="images/icons/tabler-icon-eye.png" alt="">
+                                    <p>1568</p>
+                                </div>
+    
+                            </div> -->
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Forum Section Started -->
+
+        <section class="my-32">
+
+
+            <div
+                class="banner-container flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#12132D] text-white bg-no-repeat bg-cover rounded-3xl px-3 py-8 lg:px-28 space-y-10">
+
+                <div class="space-y-6">
+
+                    <h1
+                        class="text-2xl lg:text-4xl font-[1000] leading-tight lg:leading-tight text-center lg:text-left">
+                        Join Our Forum</h1>
+                    <p class="text-sm lg:text-lg text-center lg:text-left">
+                        Share your favorite opinion and win and wp forum coffee mug! Yes, you can run <br> unit tests
+                        and view the results directly within the app.
+                    </p>
+                    <div class="text-center">
+
+                        <a class="btn bg-[#797DFC] rounded-3xl text-white font-bold px-8 border-0 text-lg">Registered
+                            Now</a>
+
+                    </div>
+
+                </div>
+                <div class="">
+
+                    <img class="" src="images/joinforum.png" alt="">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Latest Posts -->
+
+        <section class="mb-14">
+
+            <div class="text-center lg:space-y-5 my-5">
+                <h2 class="text-4xl font-[1000]">Latest Posts</h2>
+                <p class="bg-white rounded-full">Yes, you can run unit tests and view the results directly within the
+                    app. The <br>integrated testing features allow for a streamlined .</p>
+            </div>
+
+        </section>
+
+
+        <!-- Latest Posts -->
+
+        <section>
+
+            <div id="card-container" class="grid grid-cols-1 lg:grid-cols-3 w-auto">
+            
+                
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer class="bg-[#e1e1e6]">
+
+        <section class="flex justify-center items-center py-24">
+
+            <div class="text-center space-y-10">
+
+                <img class="mx-auto" src="images/logo.png" alt="">
+
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC</p>
+
+                <img class="mx-auto" src="images/icons/Social.png" alt="">
+
+                <p class="">2017, All Rights Reserved.</p>
+
+            </div>
+
+
+        </section>
+
+    </footer>
+
+    <script src="scripts/app.js"></script>
+
+</body>
+
+</html>
